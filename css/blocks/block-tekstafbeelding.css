@@ -1,0 +1,24 @@
+.block-txtImg {
+    margin-bottom: 0;
+}
+.block-txtImg .container {
+    position: relative;
+}
+.block-txtImg .container .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.block-txtImg .container .row .block {
+    flex: 1 0 0;
+    &.tekst-block {
+        .title {
+            color: var(--white);
+        }   
+        .tekst {
+            color: var(--black);
+        }
+    }
+    &.image-block {
+        padding: none;
+    }
+}
