@@ -1,3 +1,20 @@
+
+:root{
+    --family: "Montserrat", sans-serif;
+    --weight: 600;
+    --1_solid: 1px solid;
+
+    --primary_color: red;
+    --secondary_color: red;
+    --wit: red;
+    --second_wit: red;
+    --oranje: red;
+    --groen: red;
+
+/*    oproepen var(--groen)*/
+
+}
+
 .section {
     display: flex;
     flex-direction: column;
@@ -5,13 +22,15 @@
     cursor: default;
     width: 100%;
     padding: 50px 4%;
+    &.container {
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+         align-items: flex-start;
+         width: 100%;
+         max-width: 1280px;
+         margin: 0 auto;
+    }
 }
-.section .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-}
+
+
