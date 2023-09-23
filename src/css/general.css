@@ -115,6 +115,36 @@ body{
     }
 }
 
+.txt {
+    .container {
+        max-width: 768px;
+    }
+}
+
+.gallery {
+    .content-wrapper {
+        display: flex;
+        flex-direction: row;
+        padding-top: 50px;
+        width: 100%;
+        gap: 30px;
+        .gallery-wrapper {
+            max-width: 20%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+           & img {
+                margin: 0 auto;
+           }
+           & h3 {
+               text-align: center;
+           }
+
+        }
+    }
+
+}
+
 footer{
     background-color: var(--donker);
     & .container{
