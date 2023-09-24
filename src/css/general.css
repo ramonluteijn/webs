@@ -66,9 +66,55 @@ a {
         }
     }
 }
-.mobile_menu {
-    display: none;
+
+.main_menu {
+    .mobile_menu {
+        display: none;
+        margin-right: 50px;
+        margin-top: 50px;
+        position: absolute;
+        right: 0;
+    }
 }
+
+label {
+    cursor: pointer;
+}
+
+input[type=checkbox] + label {
+    .icon-bar {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: #cccccc;
+        margin: 4px;
+        transition: all 0.3s;
+    }
+    .top-bar {
+        transform: rotate(0);
+    }
+    .middle-bar {
+        opacity: 1;
+    }
+}
+
+input[type=checkbox]:checked + label {
+    .top-bar {
+        transform: rotate(45deg);
+        transform-origin: 10% 10%;
+    }
+    .middle-bar {
+        opacity: 0;
+    }
+    .bottom-bar {
+        transform: rotate(-45deg);
+        transform-origin: 10% 90%;
+    }
+}
+
+
+
+
 
 .section {
     display: flex;
@@ -206,9 +252,13 @@ footer {
     }
 
     .main_menu {
-        display: none;
+        background-color: unset;
+        .container {
+            display: none;
+        }
+        .mobile_menu {
+            display: flex;
+        }
     }
-    .mobile_menu {
-        display: block;
-    }
+
 }
