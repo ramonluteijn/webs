@@ -212,6 +212,25 @@ input[type=checkbox]:checked + label {
 
 }
 
+.catagory{
+    .container{
+        flex-direction: column;
+        .content-wrapper{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            .catagory-wrapper{
+                flex-direction: column;
+                display: flex;
+                flex: 1 0 25%;
+                padding-top: 25px;
+                padding-bottom: 20px;
+            }
+        }
+    }
+    
+}
+
 footer {
     background-color: var(--donker);
      .container{
