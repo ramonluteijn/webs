@@ -1,12 +1,8 @@
-
 :root{
     --lichtdonker: #212121;
     --donker: #1a1a1a;
     --wit: #ffffff;
     --oranje: #ff9d00;
-
-/*    oproepen var(--groen)*/
-
 }
 
 body{
@@ -76,7 +72,9 @@ a {
         right: 0;
     }
 }
-
+#dropdown {
+    display: none;
+}
 label {
     cursor: pointer;
 }
@@ -176,10 +174,10 @@ input[type=checkbox]:checked + label {
 
         & .container{
         flex-direction: row-reverse;
-        & .block.block-tekst{
-            padding-left: 0;
-            padding-right: 30px;
-        }
+            & .block.block-tekst{
+                padding-left: 0;
+                padding-right: 30px;
+            }
         }
     }
 }
