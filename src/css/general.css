@@ -191,6 +191,12 @@ section, footer {
                     margin-bottom: 20px;
                 }
             }
+            &.block-form {
+                & form {
+                      display: flex;
+                      flex-direction: column;
+                  }
+             }
         }
         &:nth-child(even) {
             & .container {
@@ -259,6 +265,7 @@ footer {
      .container {
         padding: 30px 0;
         gap: 50px;
+        justify-content: center;
         span {
             margin-left: 50px;
         }
