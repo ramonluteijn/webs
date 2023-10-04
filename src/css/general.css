@@ -3,6 +3,7 @@
     --donker: #1a1a1a;
     --wit: #ffffff;
     --oranje: #ff9d00;
+    --zwart: #000000;
 }
 
 * {
@@ -43,6 +44,13 @@ a {
             margin: revert;
             justify-content: center;
             & li {
+                & li:after {
+                    width: 100%;
+                    transition: 0.3s;
+                    height: 1px;
+                    background-color: var(--oranje);
+
+                }
                 & ul {
                     display: none;
                 }
@@ -195,8 +203,26 @@ section, footer {
                 & form {
                       display: flex;
                       flex-direction: column;
-                  }
-             }
+                       & label, textarea {
+                             margin-top: 15px;
+                       }
+                       & input, textarea {
+                             border-radius: 5px;
+                             padding: 5px;
+                       }
+                    & input[type="submit"] {
+                          background-color: var(--oranje);
+                          border: 1px solid var(--oranje);
+                          color: var(--zwart);
+                          transition: 0.3s;
+                          margin-top: 15px;
+                        &:hover {
+                             color: var(--oranje);
+                             background-color: transparent;
+                        }
+                    }
+                }
+            }
         }
         &:nth-child(even) {
             & .container {
@@ -273,7 +299,16 @@ footer {
 }
 
 @media only screen and ( max-width: 980px ) {
-    .section, .imgtxt:nth-child(even) {
+    .main_menu {
+        background-color: unset;
+        .container {
+            display: none;
+        }
+        .mobile_menu {
+            display: flex;
+        }
+    }
+    section, section.imgtxt:nth-child(even) {
         .container {
             flex-direction: column;
         }
@@ -287,15 +322,14 @@ footer {
                 }
             }
         }
+        &.quote {
+            .container {
+                align-items: center;
+                & h1 {
+                      font-size: 40px;
+                }
+            }
+        }
     }
 
-    .main_menu {
-        background-color: unset;
-        .container {
-            display: none;
-        }
-        .mobile_menu {
-            display: flex;
-        }
-    }
 }
