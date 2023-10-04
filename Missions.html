@@ -6,19 +6,78 @@
         <link rel="stylesheet" href="src/css/general.css">
     </head>
 
-<body>
-    <header class="main_menu">
-        <div class="container">
-            <ul>
-                <li><a href="Index.html">Home</a></li>
-                <li><a href="Driller.html">Driller</a></li>
-                <li><a href="Engineer.html">Engineer</a></li>
-                <li><a href="Gunner.html">Gunner</a></li>
-                <li><a href="Scout.html">Scout</a></li>
-                <li><a href="Missions.html">Missions</a></li>
-           </ul>
-        </div>
-    </header>
-</body>
-
+    <body>
+        <header class="main_menu">
+            <div class="container">
+                <ul class="nav">
+                    <li><a href="Index.html">Home</a></li>
+                    <li>
+                        <a href="Assortiment.html">Assortiment</a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="Assortiment.html">Assortiment</a>
+                                <ul class="tertiary-submenu">
+                                    <li><a href="Assortiment.html">Assortiment</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="Engineer.html">Engineer</a></li>
+                    <li><a href="Gunner.html">Gunner</a></li>
+                    <li><a href="Scout.html">Scout</a></li>
+                    <li><a href="Missions.html">Missions</a></li>
+                </ul>
+            </div>
+            <div class="mobile_menu">
+                <input id="dropdown" class="input-box" type="checkbox">
+                <label for="dropdown" class="dropdown">
+                            <span class="hamburger">
+                              <span class="icon-bar top-bar"></span>
+                              <span class="icon-bar middle-bar"></span>
+                              <span class="icon-bar bottom-bar"></span>
+                            </span>
+                    <div class="mobile-wrapper">
+                        <ul class="nav">
+                            <li><a href="Index.html">Home</a></li>
+                            <li><a href="Assortiment.html">Assortiment</a></li>
+                            <li><a href="Engineer.html">Engineer</a></li>
+                            <li><a href="Gunner.html">Gunner</a></li>
+                            <li><a href="Scout.html">Scout</a></li>
+                            <li><a href="Missions.html">Missions</a></li>
+                        </ul>
+                    </div>
+                </label>
+            </div>
+        </header>
+        <main>
+            <section class="imgtxt">
+                <div class="container">
+                    <div class="block block-tekst">
+                        <h2>Contact</h2>
+                        <p>
+                            Kerkstraat 4a
+                            <br>
+                            0000AA Oss
+                            <br>
+                            <a href="tel:+0612345678">T. 06 12345678</a>
+                            <br>
+                            <a href="mailto:info@deeprock.nl">E. info@deeprock.nl</a>
+                        </p>
+                    </div>
+                    <div class="block block-form">
+                        <form method="post">
+                            <label>Naam:</label>
+                            <input type="text" placeholder="Naam..." required>
+                            <label>Email:</label>
+                            <input type="email" placeholder="Email..." required>
+                            <label>Telefoonnummer:</label>
+                            <input type="number" pattern="[0-9{2}[0-9]{8}"  placeholder="Telefoonnummer" value="06" required>
+                            <textarea rows="7" cols="50" placeholder="Type uw bericht..."></textarea>
+                            <input type="submit" value="Opsturen">
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
