@@ -44,12 +44,24 @@ a {
             margin: revert;
             justify-content: center;
             & li {
-                & li:after {
-                    width: 100%;
-                    transition: 0.3s;
-                    height: 1px;
-                    background-color: var(--oranje);
-
+                & a {
+                    position: relative;
+                    &:after {
+                         content: "";
+                         width: 0;
+                         position: absolute;
+                         right: 0;
+                         display: block;
+                         background: var(--oranje);
+                         height: 1px;
+                         z-index: 10;
+                         transition: .4s;
+                    }
+                    &:hover {
+                        &:after {
+                            width: 100%;
+                        }
+                    }
                 }
                 & ul {
                     display: none;
@@ -305,6 +317,9 @@ footer {
         }
     }
 }
+
+/*responsive voor mobile m, laptop, ipad*/
+
 
 @media only screen and ( max-width: 980px ) {
     .main_menu {
