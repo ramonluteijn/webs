@@ -285,7 +285,15 @@ section, footer {
         }
     }
 }
-
+.equipment{
+    & section{
+        &.hero-banner{
+            .container{
+                background-image: url("../images/equipment.jpg");
+            }
+        }
+    }
+}
 footer {
     background-color: var(--donker);
      .container {
