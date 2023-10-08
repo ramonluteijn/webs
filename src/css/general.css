@@ -282,6 +282,9 @@ section, footer {
     &.catagory {
         .container {
             flex-direction: column;
+            & h2 {
+                font-size: 32px;
+            }
             .content-wrapper {
                 display: flex;
                 flex-direction: row;
@@ -296,6 +299,69 @@ section, footer {
             }
         }
     }
+    &.classes-block {
+        .container {
+            flex-wrap: wrap;
+            .class-wrapper {
+                border-top: 16px solid transparent;
+                border-right: 8px solid transparent;
+                border-bottom: 16px solid transparent;
+                border-left: 8px solid transparent;
+                flex: 1 0 25%;
+                max-width: 25%;
+                position: relative;
+                .thumbnail-wrapper {
+                    border-radius: 500px;
+                    position: relative;
+                    transition: 0.3s;
+                    & a {
+                        & img {
+                            width: 100%;
+                            max-width: 320px;
+                            height: 310px;
+                            border-radius: 500px;
+                        }
+                    }
+                }
+                .link-wrapper {
+                    & a {
+                          position: absolute;
+                            /*bottom: 50px;*/
+                            /* background-color: var(--oranje);*/
+                          border-radius: 50px;
+                            /*width: 75%;*/
+                            /*border: 1px solid var(--oranje);*/
+                          transition: 0.3s;
+                          color: #ffffff;
+                          padding: 15px 25px;
+                          left: 0;
+                          text-align: center;
+
+                            display: none;
+                    }
+                }
+                &:hover {
+                    .thumbnail-wrapper {
+                        background-color: var(--oranje);
+                        & img {
+                              opacity: 0.4;
+                        }
+                    }
+                    .link-wrapper a{
+                        /*background-color: var(--donker);*/
+                        /*color: var(--oranje);*/
+
+                        display: block;
+                        font-size: 44px;
+                        -webkit-text-stroke-color: black;
+                        -webkit-text-stroke-width: 1px;
+                        bottom: 100px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+     }
 }
 .equipment{
     & section{
