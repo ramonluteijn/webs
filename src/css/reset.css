@@ -21,6 +21,7 @@ h6,
 p,
 ul[class],
 ol[class],
+ul,
 li,
 figure,
 figcaption,
@@ -40,7 +41,7 @@ body {
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
-ul[class],
+ul[class],ul,
 ol[class] {
     list-style: none;
 }
