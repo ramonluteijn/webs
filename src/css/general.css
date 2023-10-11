@@ -387,7 +387,7 @@ section, footer {
                 }
             }
         }
-     }
+    }
 }
 .equipment{
     & section{
@@ -445,6 +445,15 @@ footer {
                 }
             }
         }
+        &.contact {
+            .block {
+                &.block-tekst {
+                     text-align: center;
+                }
+                &.block-form {
+                     margin: 0 auto;
+                }
+            }
+        }
     }
-
 }
