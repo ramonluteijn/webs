@@ -455,5 +455,18 @@ footer {
                 }
             }
         }
+        &.classes-block {
+            .container {
+                flex-direction: row;
+                .class-wrapper {
+                    flex: 1 0 50%;
+                    max-width: 50%;
+                    & img {
+                      max-width: 450px;
+                        height: 450px;
+                    }
+                }
+            }
+         }
     }
 }
