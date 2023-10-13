@@ -213,13 +213,17 @@ section, footer {
         margin: 0 auto;
     }
     &.hero-banner {
+         padding: 0;
+         margin-top: 50px;
         .container {
+            max-width: unset;
             position: relative;
             background-image: url("../images/DRGmain.jpg");
             background-repeat: no-repeat;
-            background-size: contain;
+            background-size: cover;
             height: 600px;
             background-position: center;
+            background-position-y: top;
             & h1 {
                 position: absolute;
                 bottom: 0;
@@ -232,9 +236,6 @@ section, footer {
         & .block {
             flex: 1 0 0;
             &.block-image {
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
                 & img {
                     width: 100%;
                 }
@@ -431,6 +432,7 @@ footer {
             .block {
                 &.block-image {
                     margin: 0 auto;
+                    width: 100%;
                 }
                 &.block-tekst {
                     padding: 30px 0 0;
@@ -467,6 +469,9 @@ footer {
                     }
                 }
             }
+         }
+        &.hero-banner {
+            height: 300px;
          }
     }
 }
