@@ -532,13 +532,20 @@ footer {
                 display: flex;
                 flex-direction: row;
                 width: 100%;
+                flex-wrap: wrap;
 
                 .catagory-wrapper {
                     flex-direction: column;
                     display: flex;
-                    flex: 1 0 25%;
+                    flex: 1 0 33%;
                     padding-top: 25px;
                     padding-bottom: 20px;
+                    & a {
+                        color: var(--grijs);
+                        & img {
+                            width: 100%;
+                        }
+                    }
                 }
             }
         }
@@ -725,7 +732,12 @@ footer {
                 }
              }
         }
-
+        &.catagory{
+            .container{
+                        text-align: center;
+                    }
+                }
+        }
         &.quote {
             .container {
                 & h1 {
