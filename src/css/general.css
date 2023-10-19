@@ -821,10 +821,14 @@ footer {
         }
         &.catagory{
             .container{
+                        text-align: center; 
+                    }
+                    & h2 {
                         text-align: center;
+                        width: 100%;
                     }
                 }
-        }
+            }
         &.quote {
             .container {
                 & h1 {
@@ -860,11 +864,11 @@ footer {
             }
         }
 
-        &.hero-banner {
-            height: 300px;
-        }
+    &.hero-banner {
+        height: 300px;
     }
 }
+
 
 @media only screen and (max-width: 480px) {
     .main_menu {
@@ -919,7 +923,13 @@ footer {
                 }
             }
         }
-
+        &.catagory{
+            .container{
+                .content-wrapper{
+                    font-size: 14px;
+                }
+            }
+        }
         &.contact-block {
             padding-bottom: 4%;
 
