@@ -32,7 +32,7 @@ main {
     flex: 1;
 }
 
-a {
+a, button {
     color: var(--link-grijs);
     text-decoration: none;
     width: 100%;
@@ -44,19 +44,21 @@ a {
     }
 }
 
-.button  {
+.button {
     margin-top: 30px;
     width: 100%;
+
     & a {
-          background-color: var(--oranje);
-          color: var(--wit);
-          padding: 10px 35px;
-          border: 1px solid var(--oranje);
-          border-radius: 25px;
-          transition: 0.3s;
+        background-color: var(--oranje);
+        color: var(--wit);
+        padding: 10px 35px;
+        border: 1px solid var(--oranje);
+        border-radius: 25px;
+        transition: 0.3s;
+
         &:hover {
-             background-color: var(--unset-color);
-             color: var(--oranje);
+            background-color: var(--unset-color);
+            color: var(--oranje);
         }
     }
 }
@@ -277,6 +279,7 @@ footer {
         max-width: 1280px;
         margin: 0 auto;
     }
+
     &:first-child {
         margin-top: 75px;
     }
@@ -338,6 +341,11 @@ footer {
                     textarea {
                         border-radius: 5px;
                         padding: 5px;
+                        max-width: 600px;
+                        min-width: 600px;
+                    }
+                    & textarea {
+                        min-height: 200px;
                     }
 
                     & input[type="submit"] {
@@ -424,26 +432,31 @@ footer {
                 }
             }
         }
+
         &.item-block {
             .container {
                 flex-wrap: wrap;
+
                 .column {
                     display: flex;
                     flex-direction: column;
                     flex: 1 0 auto;
                     max-width: 33.33%;
+
                     .block {
                         &.block-tekst {
                             padding: 50px 20px;
+
                             & h2 {
-                                  position: relative;
+                                position: relative;
+
                                 &:after {
-                                     content: "";
-                                     width: 100%;
-                                     position: absolute;
-                                     display: block;
-                                     background: var(--oranje);
-                                     height: 1px;
+                                    content: "";
+                                    width: 100%;
+                                    position: absolute;
+                                    display: block;
+                                    background: var(--oranje);
+                                    height: 1px;
                                 }
                             }
                         }
@@ -484,16 +497,18 @@ footer {
     }
 
     &.quote {
-     .container {
-         text-align: center;
-        & h1 {
-              width: 100%;
-              font-size: 60px;
-              color: var(--oranje);
-          }
+        .container {
+            text-align: center;
+
+            & h1 {
+                width: 100%;
+                font-size: 60px;
+                color: var(--oranje);
+            }
         }
     }
 
+    /*mag weg V*/
     &.gallery {
         .content-wrapper {
             display: flex;
@@ -581,6 +596,7 @@ footer {
 
                 .button {
                     margin-top: 0;
+
                     & a {
                         position: absolute;
                         bottom: 50px;
@@ -648,13 +664,82 @@ footer {
             }
         }
     }
+
+    &.section-image {
+        padding: 0;
+
+        .container {
+            max-width: 100%;
+            flex-wrap: wrap;
+
+            & a {
+                flex: 1 0 33.33%;
+                flex-wrap: wrap;
+
+                .image {
+                    position: relative;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: top;
+                    min-height: 500px;
+                    height: 500px;
+                    display: flex;
+                    align-items: center;
+                    & button {
+                        width: unset;
+                        color: var(--wit);
+                        padding: 10px 35px;
+                        border-radius: 25px;
+                        background-color: var(--oranje);
+                        border: 1px solid var(--oranje);
+                        z-index: 5;
+                        cursor: pointer;
+                        transition: 0.3s;
+                    }
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        transition: 0.3s;
+                        width: 100%;
+                        top: 0;
+                        left: 0;
+                        height: 100%;
+                    }
+                }
+
+                &:first-child .image {
+                    background-image: url("../images/DRGmain.jpg");
+                }
+
+                &:nth-child(2) .image {
+                    background-image: url("../images/triple.jpg");
+                }
+
+                &:nth-child(3) .image {
+                    background-image: url("../images/equipment.jpg");
+                }
+                &:hover {
+                    .image {
+                        &:before {
+                            background-color: var(--oranje);
+                            opacity: 0.7;
+                        }
+                        & button {
+                            color: var(--oranje);
+                            background-color: var(--donker);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 .equipment {
     & section {
         &.hero-banner {
             .container {
-                background-image: url("../images/DRGmain.jpg");
+                background-image: url("../images/equipment.jpg");
             }
         }
     }
@@ -689,6 +774,7 @@ footer {
                 width: unset;
                 left: 0;
                 z-index: 99;
+
                 & h1 {
                     font-size: 24px;
                     font-weight: bold;
@@ -724,13 +810,14 @@ footer {
                     }
                 }
             }
+
             &.item-block {
                 .container {
                     .column {
                         max-width: 100%;
                     }
                 }
-             }
+            }
         }
         &.catagory{
             .container{
@@ -786,17 +873,21 @@ footer {
                 margin-top: 30px;
                 margin-left: 30px;
             }
+
             .icon-bar {
                 width: 32px;
                 margin: 6px;
             }
+
             & label {
                 margin-right: 30px;
                 margin-top: 30px;
-              }
+            }
         }
     }
-    section, section.imgtxt:nth-child(even) {
+
+    section,
+    section.imgtxt:nth-child(even) {
         &.classes-block {
             .container {
                 flex-direction: column;
@@ -809,14 +900,16 @@ footer {
                         width: 300px;
                         height: 300px;
                     }
-                      .button {
-                          & a {
+
+                    .button {
+                        & a {
                             width: 100%;
-                          }
-                      }
+                        }
+                    }
                 }
             }
         }
+
         &.txt {
             &.donker {
                 .container {
@@ -826,13 +919,25 @@ footer {
                 }
             }
         }
+
         &.contact-block {
-         padding-bottom: 4%;
+            padding-bottom: 4%;
+
             .container {
                 .row {
                     flex-direction: column;
                 }
             }
-         }
+        }
+        &.section-image {
+            .container {
+                & a {
+                    .image {
+                        min-height: 300px;
+                        height: 300px;
+                    }
+                }
+            }
+        }
     }
 }
