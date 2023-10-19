@@ -8,7 +8,6 @@
     --grijs: #D3D3D3FF;
     --link-grijs: #bababab3;
     --unset-color: transparent;
-
 }
 
 * {
@@ -189,27 +188,27 @@ button {
             margin-top: 50px;
             position: absolute;
             right: 0;
-        }
 
-        .icon-bar {
-            display: block;
-            width: 40px;
-            height: 3px;
-            background-color: var(--m-menu);
-            margin: 8px;
-            transition: all 0.3s;
-        }
+            .icon-bar {
+                display: block;
+                width: 40px;
+                height: 3px;
+                background-color: var(--m-menu);
+                margin: 8px;
+                transition: all 0.3s;
+            }
 
-        .top-bar {
-            transform: rotate(0);
-        }
+            .top-bar {
+                transform: rotate(0);
+            }
 
-        .middle-bar {
-            opacity: 1;
-        }
+            .middle-bar {
+                opacity: 1;
+            }
 
-        .mobile-wrapper {
-            display: none;
+            .mobile-wrapper {
+                display: none;
+            }
         }
 
         & input[type=checkbox]:checked+label {
@@ -388,7 +387,6 @@ footer {
                                 background: var(--oranje);
                                 height: 1px;
                             }
-
                         }
 
                         &:after {
