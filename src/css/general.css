@@ -511,33 +511,6 @@ footer {
         }
     }
 
-    /*mag weg V*/
-    &.gallery {
-        .content-wrapper {
-            display: flex;
-            flex-direction: row;
-            width: 100%;
-            gap: 30px;
-            flex-wrap: wrap;
-            justify-content: center;
-
-            .gallery-wrapper {
-                flex: 1 0 auto;
-                max-width: 20%;
-                display: flex;
-                flex-direction: column;
-
-                & img {
-                    margin: 0 auto;
-                }
-
-                & h3 {
-                    text-align: center;
-                }
-            }
-        }
-    }
-
     &.catagory {
         .container {
             flex-direction: column;
