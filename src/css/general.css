@@ -32,7 +32,8 @@ main {
     flex: 1;
 }
 
-a, button {
+a,
+button {
     color: var(--link-grijs);
     text-decoration: none;
     width: 100%;
@@ -343,7 +344,9 @@ footer {
                         padding: 5px;
                         max-width: 600px;
                         min-width: 600px;
+                        width: 100%;
                     }
+
                     & textarea {
                         min-height: 200px;
                     }
@@ -555,8 +558,10 @@ footer {
                     flex: 1 0 33%;
                     padding-top: 25px;
                     padding-bottom: 20px;
+
                     & a {
                         color: var(--grijs);
+
                         & img {
                             width: 100%;
                         }
@@ -685,6 +690,7 @@ footer {
                     height: 500px;
                     display: flex;
                     align-items: center;
+
                     & button {
                         width: unset;
                         color: var(--wit);
@@ -696,6 +702,7 @@ footer {
                         cursor: pointer;
                         transition: 0.3s;
                     }
+
                     &:before {
                         content: "";
                         position: absolute;
@@ -718,12 +725,14 @@ footer {
                 &:nth-child(3) .image {
                     background-image: url("../images/equipment.jpg");
                 }
+
                 &:hover {
                     .image {
                         &:before {
                             background-color: var(--oranje);
                             opacity: 0.7;
                         }
+
                         & button {
                             color: var(--oranje);
                             background-color: var(--donker);
@@ -819,16 +828,18 @@ footer {
                 }
             }
         }
-        &.catagory{
-            .container{
-                        text-align: center; 
-                    }
-                    & h2 {
-                        text-align: center;
-                        width: 100%;
-                    }
-                }
+
+        &.catagory {
+            .container {
+                text-align: center;
             }
+
+            & h2 {
+                text-align: center;
+                width: 100%;
+            }
+        }
+
         &.quote {
             .container {
                 & h1 {
@@ -845,6 +856,11 @@ footer {
 
                 &.block-form {
                     margin: 0 auto;
+
+                    & input,
+                    textarea {
+                        min-width: unset;
+                    }
                 }
             }
         }
@@ -864,8 +880,9 @@ footer {
             }
         }
 
-    &.hero-banner {
-        height: 300px;
+        &.hero-banner {
+            height: 300px;
+        }
     }
 }
 
@@ -923,13 +940,15 @@ footer {
                 }
             }
         }
-        &.catagory{
-            .container{
-                .content-wrapper{
+
+        &.catagory {
+            .container {
+                .content-wrapper {
                     font-size: 14px;
                 }
             }
         }
+
         &.contact-block {
             padding-bottom: 4%;
 
@@ -939,6 +958,7 @@ footer {
                 }
             }
         }
+
         &.section-image {
             .container {
                 & a {
